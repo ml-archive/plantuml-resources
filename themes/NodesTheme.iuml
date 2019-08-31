@@ -1,0 +1,81 @@
+' =======================================
+' Nodes PlantUML Theme
+' Author: Dominik Hadl
+' Version: 1.0
+' 
+' Description: Used for importing in PlantUML diagrams to get consistent Nodes styling.
+' Usage: 
+'   !includesub NodesTheme.puml!<DIAGRAM_TYPE>
+'   fx.
+'   !includesub NodesTheme.puml!ACTIVITY
+' 
+' TODO: Move this to github
+' =======================================
+@startuml
+
+' Variables
+
+!$fontName = "Arial"
+!$fontSize = "12"
+
+' == General ==
+
+skinparam BackgroundColor #FFF
+skinparam Shadowing false
+skinparam Dpi 100
+
+' == Default ==
+
+skinparam default {
+    FontName $fontName
+    FontSize $fontSize
+    MonospacedFontName Source Code Pro
+}
+
+' == Title ==
+
+skinparam Title {
+    BorderThickness 2
+    BorderRoundCorner 20
+    BorderColor #B52C6E
+    BackgroundColor #D83F73
+    FontStyle bold
+    FontColor #FFF
+    FontSize 16
+}
+
+' == Arrow ==
+skinparam Arrow {
+    Color #D83F73
+}
+
+' == Activity Diagram ==
+
+skinparam Activity {
+    FontName $fontName
+    FontSize $fontSize
+    BackgroundColor #F8F7F7
+    BorderColor #E6D9E7
+    BorderThickness 1
+
+    DiamondFontName $fontName
+    DiamondFontSize $fontSize
+    DiamondFontStyle bold
+    DiamondBackgroundColor #FFEBF0
+    DiamondBorderColor #D83F73
+
+    StartColor #D83F73
+    EndColor #D83F73
+}
+
+' == Sequence Diagram ==
+
+' TODO: Define theme for sequence
+
+' ======================
+
+
+header Made by Nodes with ❤
+footer Generated on %date()
+
+@enduml
