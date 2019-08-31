@@ -2,25 +2,26 @@
 <img src="./resources/icon.png" align="right" width="120">
 
 # Nodes PlantUML Resources <!-- omit in toc -->
-This repo is aimed at providing documentation, resources, themes and other files related to creating diagrams using PlantUML at Nodes. 
+
+This repo is aimed at providing documentation, resources, themes and other files related to creating diagrams using PlantUML at Nodes.
 <br><br>
 Over time more useful good practices, workflow recommendations and new tools will be added, but feel free to open a PR if you have ideas for improvements.
 
-## Contents <!-- omit in toc -->
+## 📝 Contents <!-- omit in toc -->
 
-- [What is PlantUML?](#what-is-plantuml)
+- [🏭 What is PlantUML?](#-what-is-plantuml)
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Recommended Tools & Worfklow](#recommended-tools--worfklow)
-- [Themes](#themes)
+  - [📦 Installation](#-installation)
+  - [💻 Usage](#-usage)
+- [🛠 Recommended Tools & Worfklow](#-recommended-tools--worfklow)
+- [🎨 Themes](#-themes)
   - [Applying a theme](#applying-a-theme)
-- [C4 and PlantUML](#c4-and-plantuml)
-- [Credits](#credits)
+- [🔗 C4 and PlantUML](#-c4-and-plantuml)
+- [👥 Credits](#-credits)
   - [Authors](#authors)
-- [License](#license)
+- [📜 License](#-license)
 
-## What is PlantUML?
+## 🏭 What is PlantUML?
 
 [PlantUML](http://plantuml.com) is an open-source tool allowing users to create UML diagrams from a plain text language. The language of PlantUML is an example of a Domain-specific language. It uses Graphviz software to lay out its diagrams.
 
@@ -42,10 +43,10 @@ participant "Database" as db
 user -> reseller_ui : Request to login
 user <- reseller_ui : Ask for username, password \nand TOTP
 user -> token : Start the app to \nread the TOTP
-token -> token : Calculate the TOTP \nbase on current \ntime and secret key 
+token -> token : Calculate the TOTP \nbase on current \ntime and secret key
 user <- token : Display TOTP
 user -> reseller_ui : Provide username, password \nand TOTP
-reseller_ui -> db : Get the secret key \nof that user 
+reseller_ui -> db : Get the secret key \nof that user
 reseller_ui -> reseller_ui : Validate username, \npassword and TOTP
 user <- reseller_ui : Login success
 
@@ -63,7 +64,7 @@ We also recommend checking out the following:
 - [Real World PlantUML](https://real-world-plantuml.com) - contains examples of real world usecases and can be source of inspiration.
 - [Official Github](https://github.com/plantuml/plantuml) - useful if you want to see how is PlantUML implemented or if you want to contribute.
 
-### Installation
+### 📦 Installation
 
 The recommended way to install PlantUML is through [Homebrew](https://brew.sh).
 
@@ -73,9 +74,9 @@ brew install plantuml
 
 > Other installation options are listed on PlantUML website [here](http://plantuml.com/starting).
 
-### Usage
+### 💻 Usage
 
-After you have succesfully installed PlantUML you can start using it. 
+After you have succesfully installed PlantUML you can start using it.
 
 1. First, create a `.puml` file that contains your PlantUML code or the sample below
 
@@ -91,7 +92,7 @@ After you have succesfully installed PlantUML you can start using it.
    plantuml Diagram.puml
    ```
 
-## Recommended Tools & Worfklow
+## 🛠 Recommended Tools & Worfklow
 
 Although generating diagrams using the command line works fine, it is not the ideal workflow when actively working and iterating on a diagram. For this reason we recommend using the following tools and plugins.
 
@@ -100,11 +101,13 @@ Although generating diagrams using the command line works fine, it is not the id
 
 > You are free to use whatever code editor and extensions you want, however these tools have been tested and confirmed working with all the resources located in this repository.
 
-## Themes
+## 🎨 Themes
+
+> **List of all themes along with example pictures  [here](./docs/THEMES.md).**
 
 Themes provide some basic styling for your diagrams, so that they are more aligned with Nodes branding and they look more "up-to-date". Some elements might not be styled and we would welcome any PRs or recommendations for components that are missing styling.
 
-To check which themes are available, please check the contents of the `themes/` directory in this repository.
+All theme files are located in the `themes/` directory of this repository.
 
 ### Applying a theme
 
@@ -127,24 +130,24 @@ YOUR PUML CODE
 @enduml
 ```
 
-## C4 and PlantUML
+## 🔗 C4 and PlantUML
 
 At Nodes we use the C4 model for defining solution architecture and PlantUML can be used to generate C4 compatible diagrams.  
 
 **You can find more information on how to do C4 diagrams using PlantUML in a separate document [here](./docs/C4.md).**
 
-![](./resources/c4.png)
+![C4 Model](./resources/c4.png)
 
-## Credits
+## 👥 Credits
 
 Made with ❤️ at Nodes.
 
 ### Authors
 
-| [![nickskull](https://avatars3.githubusercontent.com/u/1776969?s=120&v=4)](https://linkedin.com/in/dominikhadl) 	|
-|:---------------------------------------------------------------------------------------------------------:	|
-|                                            **Dominik Hádl**                                            	|
+| [![nickskull](https://avatars3.githubusercontent.com/u/1776969?s=120&v=4)](https://linkedin.com/in/dominikhadl)|
+|:---------------------------------------------------------------------------------------------------------:     |
+|                                            **Dominik Hádl**                                                    |
 
-## License
+## 📜 License
 
 All files in this repository are released under the MIT license. See [LICENSE](./LICENSE) for details.
