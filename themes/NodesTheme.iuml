@@ -78,6 +78,14 @@ skinparam Activity {
     EndColor #D83F73
 }
 
+'  == Partition ==
+
+skinparam Partition {
+  BackgroundColor #ffccdd
+  BorderColor #B52C6E
+  FontStyle bold
+}
+
 ' == Actor ==
 
 skinparam Actor {
