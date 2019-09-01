@@ -13,7 +13,7 @@
 ' =======================================
 @startuml
 
-' Variables
+' == Variables ==
 
 !$fontName = "Arial"
 !$fontSize = "12"
@@ -23,6 +23,8 @@
 skinparam BackgroundColor #FFF
 skinparam Shadowing false
 skinparam Dpi 100
+skinparam RoundCorner 8
+skinparam BoxPadding 20
 
 ' == Default ==
 
@@ -45,8 +47,17 @@ skinparam Title {
 }
 
 ' == Arrow ==
+
 skinparam Arrow {
     Color #D83F73
+}
+
+' == Note ==
+
+skinparam Note {
+	BackgroundColor #f9ccff
+	BorderColor #7C3D83
+	FontSize 8
 }
 
 ' == Activity Diagram ==
@@ -56,7 +67,6 @@ skinparam Activity {
     FontSize $fontSize
     BackgroundColor #F8F7F7
     BorderColor #E6D9E7
-    BorderThickness 1
 
     DiamondFontName $fontName
     DiamondFontSize $fontSize
@@ -68,12 +78,63 @@ skinparam Activity {
     EndColor #D83F73
 }
 
+' == Actor ==
+
+skinparam Actor {
+    BackgroundColor #FFF
+    BorderColor #B52C6E
+    FontStyle bold
+}
+
+' == Participant ==
+
+skinparam Participant {
+    BackgroundColor #F8F7F7
+    BorderColor #E6D9E7
+    Padding 20
+}
+
+' == Entity ==
+
+skinparam Entity {
+    BackgroundColor #D83F73
+    BorderColor #B52C6E
+    FontStyle bold
+}
+
+' == Database ==
+
+skinparam Database {
+    BackgroundColor #D83F73
+    BorderColor #B52C6E
+    FontStyle bold
+}
+
 ' == Sequence Diagram ==
 
-' TODO: Define theme for sequence
+skinparam Sequence {
+    MessageAlignment center
+    MessageTextAlignment center
+
+    BoxBackgroundColor #F8F7F7
+    BoxBorderColor #E6D9E7
+    BoxPadding 10
+
+    DividerBackgroundColor #D83F73
+    DividerBorderColor #B52C6E
+    DividerFontColor #FFF
+
+    GroupBackgroundColor #fff
+    GroupBodyBackgroundColor #ffccdd
+    GroupBorderColor #B52C6E
+
+    TitleFontName $fontName
+    TitleFontSize 16
+    TitleFontStyle bold
+    TitleFontColor #FFF
+}
 
 ' ======================
-
 
 header Made by Nodes with ❤
 footer Generated on %date()
